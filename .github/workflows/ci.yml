@@ -1,0 +1,31 @@
+name: CI
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: PowerShell version
+        shell: pwsh
+        run: $PSVersionTable.PSVersion.ToString()
+      - name: Pinned libraries match NuGet and the manifest
+        shell: pwsh
+        run: |
+          ./lib/Fetch-Libs.ps1
+          git diff --exit-code -- lib
+      - name: Pester
+        shell: pwsh
+        run: |
+          Install-Module Pester -MinimumVersion 5.5.0 -Scope CurrentUser -Force -SkipPublisherCheck
+          Import-Module Pester -MinimumVersion 5.5.0
+          $r = Invoke-Pester -Path tests -Output Detailed -PassThru
+          if ($r.FailedCount -gt 0) { exit 1 }
+      - name: Smoke test of the real listener
+        shell: pwsh
+        run: ./tools/Invoke-SignInSmoke.ps1

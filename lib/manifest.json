@@ -1,0 +1,60 @@
+{
+  "_comment": "Pinned token-validation libraries, net8.0 folder of each NuGet package, in load order. Microsoft.IdentityModel.* and System.IdentityModel.Tokens.Jwt are maintained by Microsoft (AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet, MIT); Microsoft.Extensions.* by Microsoft (dotnet/runtime). 8.18.0 is the newest 8.x that does not need Microsoft.Bcl.Cryptography 10.x, which clashes with System.Formats.Asn1 on .NET 8 (PowerShell 7.4). Change a pin only with Fetch-Libs.ps1 -Update and a reviewed commit.",
+  "source": "https://api.nuget.org/v3-flatcontainer",
+  "files": [
+    {
+      "package": "microsoft.extensions.dependencyinjection.abstractions",
+      "version": "8.0.0",
+      "file": "Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+      "sha256": "a0106a638facae621f870eda720cb6c980c1d5d49c2f4351134e3fe043b9291b"
+    },
+    {
+      "package": "microsoft.extensions.logging.abstractions",
+      "version": "8.0.0",
+      "file": "Microsoft.Extensions.Logging.Abstractions.dll",
+      "sha256": "29e6bfaf5ce079ad4d70dc547d966038992a7428df6e726084eb9010ec837715"
+    },
+    {
+      "package": "microsoft.identitymodel.abstractions",
+      "version": "8.18.0",
+      "file": "Microsoft.IdentityModel.Abstractions.dll",
+      "sha256": "0036ab33662802f5446ce2b671f9a40dcfa1aed52b779c92a67d0a575e20b44e"
+    },
+    {
+      "package": "microsoft.identitymodel.logging",
+      "version": "8.18.0",
+      "file": "Microsoft.IdentityModel.Logging.dll",
+      "sha256": "6321eb40aeceb7c6bb8afc2a337fb22f7a2db16f4217a76c41775b881ca717c0"
+    },
+    {
+      "package": "microsoft.identitymodel.tokens",
+      "version": "8.18.0",
+      "file": "Microsoft.IdentityModel.Tokens.dll",
+      "sha256": "6b3db59eb6e958c65e856525e0f9644ab96975e0ad066c23440b7c0c541e1706"
+    },
+    {
+      "package": "microsoft.identitymodel.jsonwebtokens",
+      "version": "8.18.0",
+      "file": "Microsoft.IdentityModel.JsonWebTokens.dll",
+      "sha256": "bf9150a9e8b29d448e752e81700791985f7d6a289ef5ba88bbc97190cd6b9f7c"
+    },
+    {
+      "package": "system.identitymodel.tokens.jwt",
+      "version": "8.18.0",
+      "file": "System.IdentityModel.Tokens.Jwt.dll",
+      "sha256": "23cc65a4306ea46ad41e6b463fdf9e4ee4df2385d10af082c37c3cb7e300b4ef"
+    },
+    {
+      "package": "microsoft.identitymodel.protocols",
+      "version": "8.18.0",
+      "file": "Microsoft.IdentityModel.Protocols.dll",
+      "sha256": "55068dab15a1e9ad3855300959df172e375cbdd2602d8e5a1a9a16bad6609656"
+    },
+    {
+      "package": "microsoft.identitymodel.protocols.openidconnect",
+      "version": "8.18.0",
+      "file": "Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
+      "sha256": "55605c4f6cecb8a14a270122ff1140528fd15c3e051ee6190ce8c2e0efa2a8af"
+    }
+  ]
+}
